@@ -1,0 +1,399 @@
+* {
+    font-family: Montserrat;
+    margin: 0;
+}
+
+#header {
+    background-color: #02A28F;
+    color: white;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 66% 33%;
+    gap: 1.25rem;
+    max-width: 75rem;
+    margin: 2.5rem auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: start;
+}
+
+#mainTop {
+    position: relative;
+    overflow: hidden;
+    height: 24.0625rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.125rem;
+}
+
+#mainTop img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.625rem;
+}
+
+#mainTop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    background: linear-gradient(to bottom, #666666, transparent 30%, rgba(0, 0, 0, 1) 100%);
+    pointer-events: none;
+}
+
+.textoMainTop { position: absolute; color: white; z-index: 2; }
+#MainTop1 { bottom: 4.875rem; left: 1.5rem; }
+#MainTop2 { bottom: 2.8125rem; left: 1.5rem; }
+#MainTop3 { bottom: 1.5rem; left: 1.5rem; }
+
+.greenBar {
+    background-color: #02A28F;
+    color: white;
+    align-items: center;
+    padding: 0.3125rem 1.0625rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.greenBar p { font-size: small; }
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.cardMain img {
+    width: 100%;
+    height: 9.375rem;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    flex-shrink: 0;
+}
+
+.cardMain {
+    min-height: 15.625rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.cardMain p { font-size: small; }
+
+.cardMain p, h3 {
+    padding: 0.25rem 0.9375rem;
+}
+
+.cardMain p:first-of-type {
+    color: #02A28F;
+    padding-top: 0.625rem;
+}
+
+.cardMain p:last-of-type {
+    margin-top: auto;
+    padding-bottom: 0.9375rem;
+}
+
+.cardMain p:nth-of-type(2),
+.cardMain p:last-of-type {
+    color: #616161;
+}
+
+.cardSideBar {
+    display: flex;
+    align-items: center;
+    border-radius: 0.625rem;
+    padding: 0.75rem;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.cardSideBar img {
+    width: 8.25rem;
+    max-height: 4.375rem;
+    object-fit: cover;
+    border-radius: 0.625rem;
+    flex-shrink: 0;
+    display: block;
+}
+
+.cardSideBarTexto p:first-of-type {
+    font-size: small;
+}
+
+.cardSideBarTexto p:last-of-type {
+    font-size: x-small;
+    color: #616161;
+}
+
+.cardSideBarTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0.3125rem;
+    padding-bottom: 0.9375rem;
+    gap: 0.3125rem;
+    min-width: 0;
+    flex: 110;
+    overflow: hidden;
+}
+
+.cardSideBarTexto p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+#listas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.625rem;
+    padding-left: 0.3125rem;
+    color: #616161;
+    font-weight: 600;
+}
+
+#listas ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#listas ul li {
+    line-height: 2em;
+}
+
+#listas .esquerda {
+    text-align: left;
+}
+
+#listas .direita {
+    width: 1.25rem;
+    text-align: center;
+}
+
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #02A28F;
+    padding: 0.9375rem;
+}
+
+
+@media (max-width: 30rem) {
+
+    #content {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      gap: 0;
+      padding-left: 0.875rem;
+      padding-right: 0.875rem;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: 100vw;
+    }
+    main {
+      grid-row: 1;
+      grid-column: 1;
+    }
+    aside {
+      grid-row: 2;
+      grid-column: 1;
+    }
+  
+    #header {
+      padding-left: 0.875rem !important;
+      padding-right: 0 !important;
+      border-radius: 0;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+    #footer {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      border-radius: 0;
+      min-width: 0;
+      box-sizing: border-box;
+    }
+  
+    #mainTop {
+      border-radius: 0.75rem;
+      margin-top: 0.625rem;
+      margin-bottom: 0.625rem;
+    }
+    #mainTop img {
+      border-radius: 0.75rem;
+    }
+    .textoMainTop {
+      left: 1rem !important;
+      right: 1rem !important;
+      font-size: 1em;
+      line-height: 1.2;
+    }
+    #MainTop1 { bottom: 8.125rem; font-size: 1.0625rem; }
+    #MainTop2 { bottom: 3.25rem; font-weight: bold; font-size: 2rem;  white-space: normal;}
+    #MainTop3 { bottom: 1.125rem; }
+  
+    .greenBar {
+      margin-top: 0.75rem;
+      margin-bottom: 0.3125rem;
+      border-radius: 0.5rem;
+      padding-left: 1.125rem;
+      padding-right: 0.625rem;
+    }
+  
+    .cardGrid {
+      grid-template-columns: 1fr;
+      gap: 0.875rem;
+      padding: 0.5rem 0 !important;
+    }
+    .cardMain {
+      border-radius: 0.75rem;
+      padding: 0.625rem;
+      margin-bottom: 0.625rem;
+    }
+    .cardMain img {
+      border-radius: 0.75rem;
+      height: 7.75rem;
+      width: 100%;
+      object-fit: cover;
+    }
+    .cardMain h3, 
+    .cardMain p {
+      padding-left: 0;
+      padding-right: 0;
+      font-size: 1em;
+      word-break: break-word;
+    }
+  
+    .cardSideBar {
+      flex-direction: row;
+      align-items: center;
+      padding: 0.625rem;
+      gap: 0.875rem;
+      border-radius: 0.75rem;
+      background: #fff;
+      margin-top: 0.875rem;
+      margin-bottom: 0.625rem;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .cardSideBar img {
+      width: 6.25rem;
+      height: 5rem;
+      min-width: 6.25rem;
+      min-height: 5rem;
+      object-fit: cover;
+      border-radius: 0.75rem;
+      margin-bottom: 0;
+      flex-shrink: 0;
+      display: block;
+    }
+    .cardSideBarTexto {
+      padding-left: 0;
+      padding-bottom: 0;
+      gap: 0.25rem;
+      min-width: 0;
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cardSideBarTexto p,
+    .cardSideBarTexto h3 {
+      font-size: 0.9375rem;
+      line-height: 1.25;
+      max-width: 100%;
+      margin-bottom: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+    }
+  
+    #listas {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        width: 100%;
+        margin-top: 0.875rem;
+        margin-bottom: 0.625rem;
+      }
+      #listas .esquerda {
+        flex: 1 1 auto;
+        min-width: max-content;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        text-align: left;
+        align-items: flex-start;
+      }
+      #listas .direita {
+        flex: 0 0 auto;
+        min-width: fit-content;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: flex-end;
+        text-align: right;
+        margin-right: 0.625rem;
+      }
+      #listas ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        width: 100%;
+      }
+      #listas .esquerda ul li {
+        font-size: 0.9375rem;
+        line-height: 1.7em;
+        margin-bottom: 0.125rem;
+        white-space: nowrap;
+      }
+      #listas p {
+        font-size: 0.9375rem !important;
+        padding: 0 0.125rem !important;
+        margin-bottom: 0.375rem !important;
+        word-break: break-word;
+      }
+  
+    #footer,
+    #footer p {
+      text-align: center !important;
+      margin: 0 auto !important;
+      width: 100%;
+    }
+    #footer {
+      padding: 0.625rem 0;
+      border-radius: 0;
+    }
+}
